@@ -5,12 +5,21 @@ import "./TODOList.css";
 import TODOItem from "../TODOItem/TODOItem";
 
 const TODOList = props => {
-    return (
-        <div className='todo-list'>
+    const deleteHandler = id => {
+        props.onDelete(id);
+    };
+    let content;
+    if (props.items.length == 0) {
+        content = <p>List Is Empty.</p>
+    } else {
+        content = <div className='todo-list'>
             {
-                props.items.map(ele => <TODOItem key={ele.id} item={ele}/>)
+                props.items.map(ele => <TODOItem onDelete={deleteHandler} key={ele.id} item={ele}/>)
             }
-        </div>
+        </div>;
+    }
+    return (
+        content
     );
 };
 

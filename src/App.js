@@ -21,10 +21,14 @@ function App() {
         }]);
     }
 
+    const deleteHandler = (id) => {
+        setTodoList(prevState => prevState.filter(x => x.id != id))
+    }
+
     return (
         <div className="container">
             <AddTodo onAddTodo={createHandler}/>
-            <TODOList items={todoList}/>
+            <TODOList onDelete={deleteHandler} items={todoList}/>
         </div>
     );
 }
