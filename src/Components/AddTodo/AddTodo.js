@@ -9,7 +9,7 @@ const AddTodo = props => {
                 <input type="text" placeholder="Enter New Item Here"/>
             </div>
             <div className='add-card__btn'>
-                <button>add new</button>
+                <button>+ add new</button>
             </div>
         </div>
     );
