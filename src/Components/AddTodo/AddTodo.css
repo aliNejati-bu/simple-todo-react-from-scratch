@@ -40,4 +40,9 @@
     height: 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 4px 1px var(--color-secendry) inset;
+    transition: 200ms box-shadow;
+}
+
+.add-card__btn button:focus{
+    box-shadow: 0px 0px 4px 3px var(--color-secendry) inset;
 }
