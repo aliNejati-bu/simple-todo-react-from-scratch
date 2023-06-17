@@ -3,10 +3,19 @@ import AddTodo from "./Components/AddTodo/AddTodo";
 import TODOList from "./Components/TODOList/TODOList";
 
 function App() {
+    const todoList = [
+        {
+            name: 'Learn React',
+            id: 'i1'
+        }, {
+            name: 'Learn Nodejs',
+            id: 'i2'
+        },
+    ];
     return (
         <div className="container">
             <AddTodo/>
-            <TODOList/>
+            <TODOList items={todoList}/>
         </div>
     );
 }

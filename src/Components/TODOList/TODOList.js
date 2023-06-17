@@ -7,11 +7,9 @@ import TODOItem from "../TODOItem/TODOItem";
 const TODOList = props => {
     return (
         <div className='todo-list'>
-            <TODOItem/>
-            <TODOItem/>
-            <TODOItem/>
-            <TODOItem/>
-            <TODOItem/>
+            {
+                props.items.map(ele => <TODOItem key={ele.id} item={ele}/>)
+            }
         </div>
     );
 };

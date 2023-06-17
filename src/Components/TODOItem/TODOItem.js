@@ -6,7 +6,7 @@ const TODOItem = props => {
     return (
 
         <div className="todo-item">
-            <p>Learn React</p>
+            <p>{props.item.name}</p>
         </div>
 
     );
